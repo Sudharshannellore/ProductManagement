@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ProductMangementApp</title>
+<link rel="icon"  href="favicon-32x32.png"/>
+<link rel="stylesheet" href="ProductManagement.css"/>
+<script src="ProductMangeValidatitons.js" ></script>
+</head>
+<body>
+	<header id="head">
+	<div>
+	   <div id="con1" >
+		<button  class="nav" onclick="window.location.href='Home.html'">EXIT</button><br><br>
+	   </div>
+	</div>
+	</header>
+	<main>
+		<div id="con2" >
+		   <img id="pic" src="favicon-32x32.png"/>
+		   <p style="margin-left: 2px; font-weight: bolder; font-size: larger; " >roductMangement</p>
+	</div>
+		
+	<div id="con4"  >
+		<form method="post" action="./AddProduct"   id="form1"  onsubmit="return productvalidation()" enctype="multipart/form-data" >
+			<div class="group" >
+				<label class="label1" >Product Id :</label>
+				<input class="in" type="text" name="productid" placeholder="Product Id" id="pid"/>
+			</div>
+			 <div class="group">
+				<label class="label1">Product Name :</label>
+				<input class="in" type="text" name="productname" placeholder="Product Name" id="pname" />
+			</div>
+             <div class="group">
+				<label class="label1">Price :</label>
+				<input class="in" type="number" name="price" placeholder="Price" id="price"/>
+			</div>
+			 <div class="group">
+				<label class="label1">Made In :</label>
+				<input class="in" type="text" name="madein" placeholder="Made In" id="made"/>
+			</div>
+			 <div  class="group">
+				<label class="label1">Brand :</label>
+				<input class="in" type="text" name="brand" placeholder="Brand" id="brand"/>
+			</div>			
+			 <div  class="group">
+				<label class="label1">Manufacturing Date :</label>
+				<input class="in"  type="date" name="manfacturedate" id="mandate"/>
+			</div>
+			 <div  class="group">
+				<label class="label1">Expiry Date :</label>
+				<input class="in" type="date" name="expirydate" id="expdate"/>
+			</div>
+			 <div  class="group">
+				<label class="label1">Product Image:</label>
+				<input type="file" name="productimage" id="pimage" />
+			</div>
+			<button id="bot" type="submit">AddProduct</button>												
+		</form>
+	</div>
+	
+	</main>
+</body>
+</html>
